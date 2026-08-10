@@ -65,4 +65,18 @@ h2 {
     color: #111A3A;
     margin-bottom: 50px;
     font-family: 'Principal';
+    font-size: 1.5rem;
+}
+
+@media (max-width: 412px) {
+    .container {
+        width: 300px;
+    }
+}
+
+@media (max-width: 412px) {
+    h2 {
+        font-size: 1.3rem;
+        color: #F1F5F9;
+    }
 }
