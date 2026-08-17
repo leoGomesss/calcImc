@@ -67,7 +67,11 @@ h2 {
     font-family: 'Principal';
     font-size: 1.5rem;
 }
-
+p {
+    margin: 0 auto;
+    color: #FACC15;
+    text-align: center;
+}
 @media (max-width: 412px) {
     .container {
         width: 300px;
