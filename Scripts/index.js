@@ -87,10 +87,6 @@ function voltarParaCalculadora() {
     // Esconde a tela de resultado
     containerImc.style.display = "none";
     containerImc.style.opacity = "0";
-
-    // Opcional: limpa os campos
-    // inputAltura.value = "";
-    // inputPeso.value = "";
 }
 
 btnBotao.addEventListener("click",acaoBotao);
