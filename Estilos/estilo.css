@@ -23,7 +23,7 @@ body {
     background-color: #2563EB;
     border-radius: 7px;
 }
-.container-calc {
+#containerCalc {
     display: flex;    
     justify-content: center;
     align-items: center;
@@ -48,6 +48,16 @@ body {
     box-shadow: none;
     background-color: #22C55E;
 }
+#btnVoltar {
+    width: 90px;
+    padding: 7px;
+    border-radius: 3px;
+    cursor: pointer;
+    font-family: 'Principal';
+    box-shadow: none;
+    background-color: #2563EB;
+    color: #F1F5F9;
+}
 #limpar {
     background-color: #FACC15;
 }
@@ -68,12 +78,46 @@ h2 {
     font-size: 1.5rem;
 }
 p {
-    margin: 0 auto;
+    margin: 0 auto-;
     color: #FACC15;
     text-align: center;
 }
+#containerImc {
+    display: none;
+    opacity: 0;
+    margin: 0 auto;
+    width: 400px;
+    height: 400px;
+    background-color: #22C55E;
+    text-align: center;
+    border-radius: 7px;
+}  
+#containerImc-conteudo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-flow: column wrap;
+    gap: 30px;
+    margin: 30px auto;
+    padding: 20px;
+    width: 30vw;
+    height: 50vh;
+    background-color: #22C55E;
+    border-radius: 10px;
+}
+#containerImc-conteudo h2 {
+    color: #F1F5F9;
+}  
+
+#resultado {
+    color: #F1F5F9;
+    font-family: 'Principal';
+    font-size: 1.2em;
+    padding: 10px;
+}
 @media (max-width: 412px) {
-    .container {
+    .container, 
+    #containerImc {
         width: 300px;
     }
 }
