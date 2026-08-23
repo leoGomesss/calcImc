@@ -55,8 +55,8 @@ body {
     cursor: pointer;
     font-family: 'Principal';
     box-shadow: none;
-    background-color: #2563EB;
-    color: #F1F5F9;
+    background-color: #22C55E;
+    color: #090e22;
 }
 #limpar {
     background-color: #FACC15;
@@ -88,7 +88,7 @@ p {
     margin: 0 auto;
     width: 400px;
     height: 400px;
-    background-color: #22C55E;
+    background-color: #2563EB;
     text-align: center;
     border-radius: 7px;
 }  
@@ -100,9 +100,9 @@ p {
     gap: 30px;
     margin: 30px auto;
     padding: 20px;
-    width: 30vw;
-    height: 50vh;
-    background-color: #22C55E;
+    width: 300px;
+    height: auto;
+    background-color: #2563EB;
     border-radius: 10px;
 }
 #containerImc-conteudo h2 {
@@ -110,7 +110,7 @@ p {
 }  
 
 #resultado {
-    color: #F1F5F9;
+    color: #FACC15;
     font-family: 'Principal';
     font-size: 1.2em;
     padding: 10px;

@@ -3,20 +3,16 @@ const btnLimpar = document.querySelector("#limpar");
 const inputAltura = document.querySelector("#ialtura"); 
 const inputPeso = document.querySelector("#ipeso");
 const pResultado = document.querySelector("#resultado");
-const container = document.querySelector(".container"); // pega a div
-const containerCalc = document.querySelector("#containerCalc"); // pega a div
-/*const pResultadoPeso = document.querySelector("#resultadoPeso");*/
-const btnVoltar = document.querySelector("#btnVoltar"); // novo botão
-
-// CORRIGIDO - pega as divs certas
-
-const containerImc = document.querySelector("#containerImc"); // a classificação
+const container = document.querySelector(".container");
+const containerCalc = document.querySelector("#containerCalc");
+const btnVoltar = document.querySelector("#btnVoltar");
+const containerImc = document.querySelector("#containerImc");
 
 function acaoBotao() {
     const alturaDigitada = parseFloat(inputAltura.value.replace(',','.'));
     const pesoDigitado = parseFloat(inputPeso.value.replace(',','.'));
-
-    const imc = parseFloat(pesoDigitado/(alturaDigitada*alturaDigitada));
+    const ajusteAltura = alturaDigitada/100; 
+    const imc = parseFloat(pesoDigitado/(ajusteAltura*ajusteAltura));
 
     if (!alturaDigitada || !pesoDigitado) {
         pResultado.innerText = "Digite altura e peso!";
@@ -31,8 +27,44 @@ function acaoBotao() {
             containerImc.style.display = "block";
             containerImc.style.opacity = "1";
 
-            pResultado.innerHTML = "Seu IMC é: " + imc.toFixed(2) + " kg/m² <br> <br> Classificação: Magreza";
-        } else {
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: MAGREZA";
+        } else if(imc >= 18.5 && imc <= 24.9){
+            containerCalc.style.display = "none";
+
+            containerImc.style.display = "block";
+            containerImc.style.opacity = "1";
+
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: NORMAL";
+        }else if(imc >= 25 && imc <= 29.9){
+            containerCalc.style.display = "none";
+
+            containerImc.style.display = "block";
+            containerImc.style.opacity = "1";
+
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: SOBREPESO";
+        }else if(imc >= 30 && imc <= 34.9){
+            containerCalc.style.display = "none";
+
+            containerImc.style.display = "block";
+            containerImc.style.opacity = "1";
+
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: OBESIDADE GRAU I";
+        }else if(imc >= 35 && imc <= 39.9){
+            containerCalc.style.display = "none";
+
+            containerImc.style.display = "block";
+            containerImc.style.opacity = "1";
+
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: OBESIDADE GRAU II";
+        }else if(imc > 40){
+            containerCalc.style.display = "none";
+
+            containerImc.style.display = "block";
+            containerImc.style.opacity = "1";
+
+            pResultado.innerHTML = "SEU IMC É: " + imc.toFixed(2) + " KG/M² <br> <br> CLASSIFICAÇÃO: OBESIDADE GRAU III";
+        }
+        else {
             // Se IMC for maior que 18, mantém calculadora aparecendo
             containerCalc.style.display = "block";
             containerImc.style.display = "none";
